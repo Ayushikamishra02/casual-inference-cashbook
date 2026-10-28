@@ -1,0 +1,9 @@
+label,effect,se,ci_low,ci_high,p_value,n
+regression DiD (all stores),2.7536,1.3066,0.1927,5.3146,0.0351,794
+change in FTE on NJ dummy (Table 4 i),2.3258,1.1916,-0.0097,4.6614,0.051,357
+... + chain and ownership controls (Table 4 ii),2.3039,1.1955,-0.0394,4.6471,0.054,357
+wage-gap model at the average NJ gap (Table 4 iii: 15.65),1.6482,0.6402,0.3933,2.903,0.01,357
+"NJ dummy + controls, robust SEs",2.3039,1.4503,-0.5388,5.1465,0.1122,357
+within NJ: low-wage vs high-wage stores,3.3571,1.3005,0.8082,5.906,0.0098,0
+temporarily closed stores counted as 0 FTE,2.4932,1.346,-0.145,5.1314,0.064,0
+PLACEBO: PA region vs PA region (no treatment),-2.7083,2.4312,-7.4735,2.0568,0.2653,0

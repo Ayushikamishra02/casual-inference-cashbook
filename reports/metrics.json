@@ -1,0 +1,523 @@
+{
+  "minimum_wage": {
+    "table": {
+      "PA": {
+        "before": 23.331,
+        "before_se": 1.351,
+        "after": 21.166,
+        "after_se": 0.943,
+        "change": -2.166,
+        "change_se": 1.253,
+        "n_before": 77.0,
+        "n_after": 77.0
+      },
+      "NJ": {
+        "before": 20.439,
+        "before_se": 0.508,
+        "after": 21.027,
+        "after_se": 0.52,
+        "change": 0.588,
+        "change_se": 0.481,
+        "n_before": 321.0,
+        "n_after": 319.0
+      },
+      "NJ - PA": {
+        "before": -2.892,
+        "before_se": 1.444,
+        "after": -0.138,
+        "after_se": 1.077,
+        "change": 2.754,
+        "change_se": 1.342,
+        "n_before": NaN,
+        "n_after": NaN
+      }
+    },
+    "regression": {
+      "label": "regression DiD (all stores)",
+      "effect": 2.753605782980653,
+      "se": 1.3066070124191214,
+      "ci_low": 0.19265603863917535,
+      "ci_high": 5.314555527322131,
+      "p_value": 0.03507880121852385,
+      "n": 794
+    },
+    "robustness": [
+      {
+        "label": "regression DiD (all stores)",
+        "effect": 2.7536,
+        "se": 1.3066,
+        "ci_low": 0.1927,
+        "ci_high": 5.3146,
+        "p_value": 0.0351,
+        "n": 794
+      },
+      {
+        "label": "change in FTE on NJ dummy (Table 4 i)",
+        "effect": 2.3258,
+        "se": 1.1916,
+        "ci_low": -0.0097,
+        "ci_high": 4.6614,
+        "p_value": 0.051,
+        "n": 357
+      },
+      {
+        "label": "... + chain and ownership controls (Table 4 ii)",
+        "effect": 2.3039,
+        "se": 1.1955,
+        "ci_low": -0.0394,
+        "ci_high": 4.6471,
+        "p_value": 0.054,
+        "n": 357
+      },
+      {
+        "label": "wage-gap model at the average NJ gap (Table 4 iii: 15.65)",
+        "effect": 1.6482,
+        "se": 0.6402,
+        "ci_low": 0.3933,
+        "ci_high": 2.903,
+        "p_value": 0.01,
+        "n": 357
+      },
+      {
+        "label": "NJ dummy + controls, robust SEs",
+        "effect": 2.3039,
+        "se": 1.4503,
+        "ci_low": -0.5388,
+        "ci_high": 5.1465,
+        "p_value": 0.1122,
+        "n": 357
+      },
+      {
+        "label": "within NJ: low-wage vs high-wage stores",
+        "effect": 3.3571,
+        "se": 1.3005,
+        "ci_low": 0.8082,
+        "ci_high": 5.906,
+        "p_value": 0.0098,
+        "n": 0
+      },
+      {
+        "label": "temporarily closed stores counted as 0 FTE",
+        "effect": 2.4932,
+        "se": 1.346,
+        "ci_low": -0.145,
+        "ci_high": 5.1314,
+        "p_value": 0.064,
+        "n": 0
+      },
+      {
+        "label": "PLACEBO: PA region vs PA region (no treatment)",
+        "effect": -2.7083,
+        "se": 2.4312,
+        "ci_low": -7.4735,
+        "ci_high": 2.0568,
+        "p_value": 0.2653,
+        "n": 0
+      }
+    ],
+    "wage_first_stage": {
+      "label": "starting wage ($)",
+      "effect": 0.48138208885696676,
+      "se": 0.0494911757630531,
+      "ci_low": 0.3843793843613827,
+      "ci_high": 0.5783847933525508,
+      "p_value": 2.3216919475519117e-22,
+      "n": 779
+    },
+    "price": {
+      "label": "price of a meal ($)",
+      "effect": 0.07944170785584478,
+      "se": 0.04750561786474127,
+      "ci_low": -0.013669303159048102,
+      "ci_high": 0.17255271887073767,
+      "p_value": 0.09447321576750045,
+      "n": 763
+    },
+    "baseline_fte_nj": 20.439408099688475
+  },
+  "organ_donation": {
+    "main": {
+      "label": "TWFE DiD, SEs clustered by state",
+      "effect": -0.022458974358974617,
+      "se": 0.006720765526939202,
+      "ci_low": -0.03563167479177545,
+      "ci_high": -0.009286273926173781,
+      "p_value": 0.0008325842635932894,
+      "n": 162
+    },
+    "baseline_rate_ca": 0.27133333333333337,
+    "relative_effect": -0.0827726327726337,
+    "permutation": {
+      "effect": -0.02245897435897437,
+      "p_value": 0.18518518518518517,
+      "n_units": 27,
+      "rank": 5
+    },
+    "placebo_in_time": {
+      "label": "placebo start at t=3",
+      "effect": -0.0016769230769242114,
+      "se": 0.0034365811594122093,
+      "ci_low": -0.008412622149372141,
+      "ci_high": 0.005058775995523719,
+      "p_value": 0.6255763325252659,
+      "n": 81
+    },
+    "event_study": [
+      {
+        "time": 1,
+        "rel_time": -3,
+        "coef": -0.0029,
+        "se": 0.0056,
+        "ci_low": -0.0139,
+        "ci_high": 0.008
+      },
+      {
+        "time": 2,
+        "rel_time": -2,
+        "coef": 0.0063,
+        "se": 0.0025,
+        "ci_low": 0.0014,
+        "ci_high": 0.0112
+      },
+      {
+        "time": 3,
+        "rel_time": -1,
+        "coef": 0.0,
+        "se": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      },
+      {
+        "time": 4,
+        "rel_time": 0,
+        "coef": -0.0216,
+        "se": 0.0055,
+        "ci_low": -0.0324,
+        "ci_high": -0.0107
+      },
+      {
+        "time": 5,
+        "rel_time": 1,
+        "coef": -0.0203,
+        "se": 0.0049,
+        "ci_low": -0.0299,
+        "ci_high": -0.0107
+      },
+      {
+        "time": 6,
+        "rel_time": 2,
+        "coef": -0.0222,
+        "se": 0.011,
+        "ci_low": -0.0437,
+        "ci_high": -0.0006
+      }
+    ]
+  },
+  "job_training": {
+    "benchmark": {
+      "difference": 1794.3423818500974,
+      "difference_se": 670.824490766941,
+      "adjusted": 1586.4525549728196,
+      "adjusted_se": 664.5723921641501,
+      "n_treated": 185,
+      "n_control": 260
+    },
+    "raw_naive": -8497.516148132978,
+    "estimates": {
+      "naive difference (common support)": {
+        "estimate": -1881.3,
+        "ci_low": -3049.9,
+        "ci_high": -488.1,
+        "error_vs_experiment": -3675.7
+      },
+      "OLS with controls": {
+        "estimate": 1132.0,
+        "ci_low": -89.9,
+        "ci_high": 2342.1,
+        "error_vs_experiment": -662.3
+      },
+      "regression adjustment": {
+        "estimate": 1340.9,
+        "ci_low": 52.9,
+        "ci_high": 2606.2,
+        "error_vs_experiment": -453.4
+      },
+      "PS matching (1-NN)": {
+        "estimate": 984.5,
+        "ci_low": 5.0,
+        "ci_high": 3695.6,
+        "error_vs_experiment": -809.9
+      },
+      "PS matching (5-NN, caliper)": {
+        "estimate": 1245.8,
+        "ci_low": -189.8,
+        "ci_high": 3045.4,
+        "error_vs_experiment": -548.5
+      },
+      "IPW": {
+        "estimate": 1860.0,
+        "ci_low": 277.7,
+        "ci_high": 3455.9,
+        "error_vs_experiment": 65.6
+      },
+      "doubly robust (AIPW)": {
+        "estimate": 1607.3,
+        "ci_low": 102.3,
+        "ci_high": 3195.9,
+        "error_vs_experiment": -187.1
+      }
+    },
+    "no_earnings": {
+      "naive difference (common support)": -6932.2,
+      "OLS with controls": -3456.9,
+      "regression adjustment": -3422.7,
+      "PS matching (1-NN)": -3112.2,
+      "PS matching (5-NN, caliper)": -3661.6,
+      "IPW": -3654.1,
+      "doubly robust (AIPW)": -3692.6
+    },
+    "n_obs": 16177,
+    "n_kept": 4041,
+    "n_controls_used_5nn": 353,
+    "sensitivity": {
+      "estimate": 1132.0048936403268,
+      "t": 2.0065534626079535,
+      "rv_q1": 0.03112390218461168,
+      "rv_qa": 0.0007207859430501093,
+      "partial_r2_treatment": 0.000998816812843555,
+      "partial_r2_re75_outcome": 0.043967778808403225
+    },
+    "placebo": {
+      "observed": 1859.9547548874898,
+      "placebo_mean": 0.15797294142268584,
+      "placebo_sd": 503.1303951893378,
+      "p_value": 0.0
+    },
+    "max_abs_smd_before": 2.4277468150409307,
+    "max_abs_smd_ipw": 0.0783253923811182,
+    "max_abs_smd_5nn": 0.240468384045619,
+    "dowhy": {
+      "estimand": "Estimand type: EstimandType.NONPARAMETRIC_ATE\n\n### Estimand : 1\nEstimand name: backdoor\nEstimand expression:\n   d                                                                           \u21aa\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500(E[re78|educ,marr,u74,age,re75,nodegree,u75,educ_re74,re74,black,educ2 \u21aa\nd[treat]                                                                       \u21aa\n\n\u21aa                  \n\u21aa ,age2,age3,hisp])\n\u21aa",
+      "refuted_estimate": "linear regression",
+      "estimates": {
+        "linear regression": 1572.4433454340397,
+        "propensity weighting": 1746.5088295419328
+      },
+      "default_settings_estimate": -37.88458831006301,
+      "refuters": {
+        "placebo treatment (shuffle who was treated)": {
+          "original": 1572.4433454340397,
+          "new": 62.342685209283516,
+          "p_value": 0.8999999999999999
+        },
+        "add a random common cause": {
+          "original": 1572.4433454340397,
+          "new": 1571.5790930589717,
+          "p_value": 0.94
+        },
+        "re-estimate on random 80% subsets": {
+          "original": 1572.4433454340397,
+          "new": 1604.0407017003738,
+          "p_value": 0.8600000000000001
+        }
+      },
+      "n": 4041
+    }
+  },
+  "tobacco": {
+    "weights": {
+      "Utah": 0.344,
+      "Nevada": 0.242,
+      "Montana": 0.22,
+      "Colorado": 0.135,
+      "Connecticut": 0.059
+    },
+    "v": {
+      "lnincome (1980-1988)": 0.0,
+      "retprice (1980-1988)": 0.0,
+      "age15to24 (1980-1988)": 0.702,
+      "beer (1984-1988)": 0.0,
+      "cigsale (1975)": 0.0,
+      "cigsale (1980)": 0.298,
+      "cigsale (1988)": 0.0
+    },
+    "predictors": {
+      "lnincome (1980-1988)": {
+        "treated": 10.077,
+        "synthetic": 9.85,
+        "donor average": 9.829
+      },
+      "retprice (1980-1988)": {
+        "treated": 89.422,
+        "synthetic": 89.422,
+        "donor average": 87.266
+      },
+      "age15to24 (1980-1988)": {
+        "treated": 0.174,
+        "synthetic": 0.174,
+        "donor average": 0.173
+      },
+      "beer (1984-1988)": {
+        "treated": 24.28,
+        "synthetic": 24.276,
+        "donor average": 23.655
+      },
+      "cigsale (1975)": {
+        "treated": 127.1,
+        "synthetic": 127.1,
+        "donor average": 136.932
+      },
+      "cigsale (1980)": {
+        "treated": 120.2,
+        "synthetic": 120.2,
+        "donor average": 138.089
+      },
+      "cigsale (1988)": {
+        "treated": 90.1,
+        "synthetic": 91.363,
+        "donor average": 113.824
+      }
+    },
+    "effect_1989_2000": -18.884371527697684,
+    "effect_2000": -25.621977781679952,
+    "relative_effect_2000": -0.3811547744830371,
+    "pre_rmspe": 1.7768882667909687,
+    "post_rmspe": 19.845809754922325,
+    "ratio": 11.168856323624407,
+    "p_values": {
+      "all 38 placebos": 0.02564102564102564,
+      "placebos with pre-MSPE < 20x CA": 0.029411764705882353,
+      "< 5x": 0.034482758620689655,
+      "< 2x": 0.058823529411764705
+    },
+    "did_vs_average_effect": -27.34911126500461,
+    "placebo_in_time_effect": -2.8354107885117497,
+    "leave_one_out": [
+      {
+        "dropped": "Utah",
+        "weight_of_dropped": 0.344,
+        "effect": -17.675,
+        "pre_rmspe": 3.038
+      },
+      {
+        "dropped": "Nevada",
+        "weight_of_dropped": 0.242,
+        "effect": -21.027,
+        "pre_rmspe": 2.43
+      },
+      {
+        "dropped": "Montana",
+        "weight_of_dropped": 0.22,
+        "effect": -17.52,
+        "pre_rmspe": 1.929
+      },
+      {
+        "dropped": "Colorado",
+        "weight_of_dropped": 0.135,
+        "effect": -18.509,
+        "pre_rmspe": 1.974
+      },
+      {
+        "dropped": "Connecticut",
+        "weight_of_dropped": 0.059,
+        "effect": -18.782,
+        "pre_rmspe": 1.949
+      }
+    ],
+    "ca_1988": 90.1,
+    "published_adh_weights": {
+      "Utah": 0.334,
+      "Nevada": 0.234,
+      "Montana": 0.199,
+      "Colorado": 0.164,
+      "Connecticut": 0.069
+    },
+    "pysyncon_crosscheck": {
+      "Nelder-Mead from equal weights": {
+        "weights": {
+          "Colorado": 0.625,
+          "Connecticut": 0.273,
+          "Utah": 0.101
+        },
+        "pre_rmspe": 4.629114528719287,
+        "effect_1989_2000": -19.84785833333334
+      },
+      "Nelder-Mead from regression start": {
+        "weights": {
+          "Colorado": 0.323,
+          "Connecticut": 0.083,
+          "Nevada": 0.233,
+          "Utah": 0.362
+        },
+        "pre_rmspe": 1.982024761117835,
+        "effect_1989_2000": -17.846925000000006
+      }
+    }
+  },
+  "simulations": {
+    "did": {
+      "parallel trends hold": {
+        "mean_did": 1.998,
+        "coverage": 0.96,
+        "post_only": 4.005
+      },
+      "parallel trends violated": {
+        "mean_did": 3.18,
+        "coverage": 0.0,
+        "post_only": 5.995
+      }
+    },
+    "matching": {
+      "naive difference": {
+        "mean estimate": -5154.816,
+        "bias": -6154.816,
+        "sd across sims": 266.883,
+        "rmse": 6160.541
+      },
+      "regression adjustment": {
+        "mean estimate": 1893.244,
+        "bias": 893.244,
+        "sd across sims": 147.65,
+        "rmse": 905.245
+      },
+      "PS matching (1-NN)": {
+        "mean estimate": 1005.307,
+        "bias": 5.307,
+        "sd across sims": 289.024,
+        "rmse": 287.624
+      },
+      "IPW": {
+        "mean estimate": 997.616,
+        "bias": -2.384,
+        "sd across sims": 184.714,
+        "rmse": 183.803
+      },
+      "doubly robust (AIPW)": {
+        "mean estimate": 993.427,
+        "bias": -6.573,
+        "sd across sims": 167.264,
+        "rmse": 166.555
+      },
+      "IPW, confounder x2 omitted": {
+        "mean estimate": 2070.527,
+        "bias": 1070.527,
+        "sd across sims": 165.863,
+        "rmse": 1083.173
+      }
+    },
+    "synth": {
+      "synthetic control": {
+        "mean estimate": -9.838,
+        "bias": 0.162,
+        "sd across sims": 1.551,
+        "rmse": 1.54
+      },
+      "DiD vs average of donors": {
+        "mean estimate": -10.79,
+        "bias": -0.79,
+        "sd across sims": 3.189,
+        "rmse": 3.247
+      }
+    }
+  }
+}
